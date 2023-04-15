@@ -87,7 +87,8 @@
         <EditText
             android:id="@+id/dice"
             style="@style/EditTextStyle"
-            android:layout_width="120dp"
+            android:hint="@string/enter_size"
+            android:layout_weight="1"
             android:layout_height="wrap_content"/>
         
         <Button

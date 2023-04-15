@@ -5,6 +5,5 @@
     <string name="roll_once">Roll Once</string>
     <string name="roll_twice">Roll Twice</string>
     <string name="create_dice">Create dice</string>
-    <string name="result">Random Side Up for Dice</string>
-    <string name="is">is:</string>
+    <string name="enter_size">Enter Size</string>
 </resources>
