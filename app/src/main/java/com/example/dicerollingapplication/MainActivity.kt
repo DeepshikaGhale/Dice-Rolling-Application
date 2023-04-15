@@ -43,9 +43,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         binding.rollOnceId.setOnClickListener(){
             //validate
             if (selectedDice != 0){
-                binding.resultSection.visibility = View.VISIBLE
-                binding.result2Id.visibility = View.VISIBLE
-                binding.resultLabelId.text = "Random side up for dice $selectedDice is:"
+                makeResultVisible(selectedDice)
+
                 val die = Die(noOfSides = selectedDice)
                 die.roll()
                 binding.result1Id.text = die.randomSideUp.toString()
@@ -59,10 +58,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         binding.rollTwiceId.setOnClickListener(){
             //validate
             if (selectedDice != 0){
-                binding.resultSection.visibility = View.VISIBLE
+                makeResultVisible(selectedDice)
                 binding.result2Id.visibility = View.VISIBLE
-                binding.result2Id.visibility = View.VISIBLE
-                binding.resultLabelId.text = "Random side up for dice $selectedDice is:"
 
                 val die = Die(noOfSides = selectedDice)
                 die.roll()
@@ -97,9 +94,19 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
         var selectedSpinnerItem = binding.diceSpinner.selectedItem.toString()
-        if(selectedSpinnerItem != placeholder){
+       if(selectedSpinnerItem != placeholder){
             selectedDice = binding.diceSpinner.selectedItem.toString().toInt()
+        }else{
+            //making the result invisible if the user selects the placeholder
+           binding.resultSection.visibility = View.GONE
         }
+    }
+
+    //make the result visible
+    private fun makeResultVisible(selectedDice: Int){
+        binding.resultSection.visibility = View.VISIBLE
+        binding.result1Id.visibility = View.VISIBLE
+        binding.resultLabelId.text = "Random side up for dice $selectedDice is:"
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
