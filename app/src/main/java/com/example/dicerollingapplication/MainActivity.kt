@@ -36,8 +36,10 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             if (selectedDice != 0){
                 binding.resultSection.visibility = View.VISIBLE
                 binding.result2Id.visibility = View.VISIBLE
-
-
+                binding.resultLabelId.text = "Random side up for dice $selectedDice is:"
+                val die = Die(noOfSides = selectedDice)
+                die.roll()
+                binding.result1Id.text = die.randomSideUp.toString()
                 binding.result2Id.visibility = View.GONE
             }else{
                 Toast.makeText(this, "Please select dice to roll", Toast.LENGTH_SHORT).show()
@@ -52,6 +54,11 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 binding.result2Id.visibility = View.VISIBLE
                 binding.result2Id.visibility = View.VISIBLE
 
+                val die = Die(noOfSides = selectedDice)
+                die.roll()
+                binding.result1Id.text = die.randomSideUp.toString()
+                die.roll()
+                binding.result2Id.text = die.randomSideUp.toString()
 
             }else{
                 Toast.makeText(this, "Please select dice to roll", Toast.LENGTH_SHORT).show()

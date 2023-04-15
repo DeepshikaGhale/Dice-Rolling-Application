@@ -12,16 +12,9 @@ class Die {
         noOfSides = 6
         roll()
     }
-
     //secondary constructors
     //takes the number of sides value from the user
     constructor(noOfSides: Int): this(){
-        this.noOfSides = noOfSides
-        roll()
-    }
-
-    //takes both name and number of sides from the user
-    constructor(name: String, noOfSides: Int): this(){
         this.noOfSides = noOfSides
         roll()
     }
