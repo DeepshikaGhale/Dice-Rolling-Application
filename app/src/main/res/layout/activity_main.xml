@@ -91,6 +91,7 @@
             android:id="@+id/dice"
             style="@style/EditTextStyle"
             android:hint="@string/enter_size"
+            android:textSize="14dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
         
