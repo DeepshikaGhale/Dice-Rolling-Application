@@ -13,6 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <Spinner
+        android:id="@+id/conversionSpinner"
+        android:padding="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/roll_once_id"
         style="@style/ButtonStyle"
@@ -23,7 +33,70 @@
         style="@style/ButtonStyle"
         android:text="@string/roll_twice" />
 
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/result"
+                style="@style/TextLabel"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/dice"
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/is"
+                style="@style/TextLabel"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/result1Id"
+                android:text="2"
+                style="@style/ResultLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/result2Id"
+                android:text="2"
+                style="@style/ResultLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    <TextView
+        android:text="@string/create_dice"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,12 +105,14 @@
         
         <EditText
             android:id="@+id/user_dice"
+            style="@style/EditTextStyle"
             android:layout_width="120dp"
             android:layout_height="wrap_content"/>
         
         <Button
             android:id="@+id/create_dice"
             style="@style/ButtonStyle"
+            android:layout_margin="8dp"
             android:text="@string/create_dice" />
     </LinearLayout>
 
