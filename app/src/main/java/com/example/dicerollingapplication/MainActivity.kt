@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
        if(selectedSpinnerItem != placeholder){
             selectedDice = binding.diceSpinner.selectedItem.toString().toInt()
         }else{
+            selectedDice = 0
             //making the result invisible if the user selects the placeholder
            binding.resultSection.visibility = View.GONE
         }

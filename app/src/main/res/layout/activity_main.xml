@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+<!--    label text-->
     <TextView
         android:text="@string/select_dice"
         style="@style/TextLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+<!--   to show drop down list of dices-->
 
     <Spinner
         android:id="@+id/diceSpinner"
@@ -22,17 +24,17 @@
         android:background="@drawable/spinner_border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
+<!--displays one result-->
     <Button
         android:id="@+id/roll_once_id"
         style="@style/ButtonStyle"
         android:text="@string/roll_once"/>
-
+<!--displays two results-->
     <Button
         android:id="@+id/roll_twice_id"
         style="@style/ButtonStyle"
         android:text="@string/roll_twice" />
-
+<!--result layout-->
     <LinearLayout
         android:id="@+id/resultSection"
         android:layout_width="match_parent"
@@ -70,9 +72,10 @@
         </LinearLayout>
 
         </LinearLayout>
+    <!--result layout-->
 
 
-
+<!--design to create dice-->
     <TextView
         android:text="@string/create_dice"
         style="@style/TextLabel"
@@ -97,5 +100,6 @@
             android:layout_margin="8dp"
             android:text="@string/create_dice" />
     </LinearLayout>
+    <!--design to create dice-->
 
 </LinearLayout>
