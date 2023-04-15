@@ -4,5 +4,5 @@
     <string name="choose">Choose</string>
     <string name="roll_once">Roll Once</string>
     <string name="roll_twice">Roll Twice</string>
-    <string name="create_dice">Create your own dice</string>
+    <string name="create_dice">Create dice</string>
 </resources>

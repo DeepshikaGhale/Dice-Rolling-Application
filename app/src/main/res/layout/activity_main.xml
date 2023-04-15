@@ -13,4 +13,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/roll_once_id"
+        style="@style/ButtonStyle"
+        android:text="@string/roll_once"/>
+
+    <Button
+        android:id="@+id/roll_twice_id"
+        style="@style/ButtonStyle"
+        android:text="@string/roll_twice" />
+
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <EditText
+            android:id="@+id/user_dice"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"/>
+        
+        <Button
+            android:id="@+id/create_dice"
+            style="@style/ButtonStyle"
+            android:text="@string/create_dice" />
+    </LinearLayout>
+
 </LinearLayout>
